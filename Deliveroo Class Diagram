@@ -1,0 +1,50 @@
+@startuml
+ 
+title Deliveroo - Class Diagram
+ 
+ 
+class Account {
+  account number()
+  accountName
+  password
+}
+class Customer {
+  name
+  address
+  telephone
+  email
+  orderFood()
+  cancelOrder()
+}
+ 
+class Restaurant {
+  name
+  address
+  menu
+  openTime
+  closeTime
+  contactDetails
+  order number()
+}
+ 
+class Driver { 
+  name 
+  address
+  order number()
+}
+ 
+class Order {
+orderNumber
+customerId
+restaurantName
+}
+ 
+Account <|-up- Restaurant
+Account <|-up- Driver
+Order <|-Customer
+ 
+ 
+Restaurant <|-Order
+
+ 
+@enduml
