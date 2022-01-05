@@ -39,12 +39,12 @@ customerId
 restaurantName
 }
  
-Account <|-up- Restaurant
-Account <|-up- Driver
-Order <|-Customer
+Account -down- Restaurant
+Account -up- Driver
+Order <-Customer
  
  
-Restaurant <|-Order
+Restaurant "*" - "1" Order
 
  
 @enduml
