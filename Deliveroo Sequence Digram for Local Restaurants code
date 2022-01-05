@@ -9,7 +9,7 @@ Customer -> App_UI : request location
 App_UI -> Customer: enter location
 Customer -> App_UI : submit location 
 App_UI -> App_API : scan for all local restaurants
-App_API -> Database: save location
+App_API -> Database: retrieve restaurants which match/near location
 
 database Database
 
