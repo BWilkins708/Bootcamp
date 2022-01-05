@@ -7,22 +7,27 @@ actor :Customer: as C
 actor :Deliveroo Driver: as DD
 actor :Restaurant: as R
 
+rectangle "Deliveroo Driver"{
 DD -> (Address where to drop order off to)
 DD -> (Time to pick up order)
 DD -> (Notification on order)
+}
 
+rectangle "Restaurant"{
 R -> (Give food to delivery driver)
 R -> (Quality check)
 R -> (Make food)
-R -> (Give and send a time to driver when ready for pick-up)
-R -> (Notification of what customer has ordered)
+R -> (Give and send a time for driver pick-up)
+R -> (Notification of whats been ordered)
+}
 
-rectangle Customer {
+rectangle "Customer"{
 C -> (Eat and enjoy)
-C -> (Information on when food should arrive)
-C -> (Order/pay for food)
+C -> (View order progress)
+C -> (Pay food)
+C -> (Order food)
 C -> (Pick out of food options provided)
 C -> (Enter address)
-
+}
 
 @enduml
