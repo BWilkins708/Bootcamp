@@ -23,9 +23,9 @@ class Passenger {
 
 const brook = new Passenger('Brook', '25671', '24C');
 const brookHandLuggage = new Bag(12);
-const brookLargeLuggae = new Bag(21);
+const brookLargeLuggage = new Bag(21);
 brook.addBag(brookHandLuggage)
-brook.addBag(brookLargeLuggae)
+brook.addBag(brookLargeLuggage)
 console.log(brook.bags)
 
 module.exports = Passenger

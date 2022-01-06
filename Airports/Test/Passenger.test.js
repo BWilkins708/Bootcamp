@@ -1,5 +1,11 @@
 const Passenger = require('../Passenger')
+const Bag = require('../Bag')
 
-describe('definera suit of tests for the Passenger class', function () {
+describe('Test Passenger has bag', function () {
 
-    test('test name', function() {
+    test('has correct luggage', function () {
+
+        const brookHandLuggage = new Bag(12);
+
+        expect(brookHandLuggage).toBe(12);
+    });
