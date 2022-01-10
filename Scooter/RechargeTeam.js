@@ -8,7 +8,7 @@ class RechargeTeam {
         this.name=name;
     }
 
-    async chargeScooter(){
+    chargeScooter(){
         console.log('Begin charging');
 
         new Promise(resolve => setTimeout(resolve, 1500)); //1.5 seconds
