@@ -1,24 +1,35 @@
+const Scooter = require('./Scooter');
+const RechargeTeam = require('./RechargeTeam');
+const Payment = require('./Payment');
+
+
 class Customer {
 
     //Properties
-    paymentInformation;
-    personalInformation;
+    name;
+    age;
+    email;
+    location;
 
-    constructor(paymentInformation, personalInformation){
-        this.paymentInformation = paymentInformation
-        this.personalInformation = personalInformation
+    constructor(name, age, email, location){
+        this.name = name;
+        this.age = age;
+        this.email = email;
+        this.location = location;
+    }
+
+    isOfAge() {
+        if(this.age <= 17) {
+            console.log("You are correct age");
+            return false
+        }else {
+            console.log("You are not right age");
+            return true
+        }
     }
 }
 
-hasDrivingLicence() {
-    if(this.personalInformation <= 17) {
-        console.log("You are correct age");
-        return false
-    }else {
-        console.log("You are not right age");
-        return true
-    }
-}
+const b = new Customer('Brook', 19, 'abcd@gmail.com', 'Essex')
+const j = new Customer('Jane', 34, 'efgh@gmail.com', 'London')
 
-const brook = new Customer('1234 5678 9999', 'Brook Wilkins 19');
-const brook 
+module.exports=Customer
