@@ -13,6 +13,4 @@ Restaurant.init({
     timestamps: false,
 });
 
-module.exports = {
-    Restaurant
-}
+module.exports = Restaurant

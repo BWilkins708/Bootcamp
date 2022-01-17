@@ -12,6 +12,4 @@ Item.init({
     timestamps: false,
 });
 
-module.exports = {
-    Item
-}
+module.exports = Item

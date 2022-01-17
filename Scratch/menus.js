@@ -12,6 +12,4 @@ Menu.init({
     timestamps: false,
 });
 
-module.exports = {
-    Menu
-}
+module.exports = Menu
