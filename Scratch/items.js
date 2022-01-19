@@ -1,7 +1,11 @@
 const {sequelize, DataTypes, Model} = require('./sequelize_index');
 
+/**
+ * Represents a MenuItem
+ */
 class Item extends Model {
 
+    // add methods here
 
 }
 Item.init({
