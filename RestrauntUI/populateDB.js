@@ -1,8 +1,8 @@
-const {Restaurant} = require('./Restaurants.js')
+const Restaurant = require('./Restaurants.js')
 const {Menu} = require('./Menus.js')
 const {Item} = require('./Items.js')
 const fsp = require('fs').promises; // Node.js file system module with promises
-const {sequelize} = require('../sequelize_index');
+const {sequelize} = require('./sequelize_index');
 
 /**
  * Load the data from the file and
@@ -26,6 +26,7 @@ async function loadAndInsert() {
 
         for (let j = 0; j < currentRestaurant.menus.length; j++) {
             const currentMenu = currentRestaurant.menus[j]
+            console.log({title: currentMenu.title, restaurant_id: i+1})
 
             await Menu.create({title: currentMenu.title, restaurant_id: i+1})
 

@@ -10,13 +10,15 @@ class Menu extends Model {
 }
 
 Menu.init({
-    title: DataTypes.STRING
+    title: DataTypes.STRING,
+    restaurant_id: DataTypes.INTEGER,
 }, {
     sequelize,
     timestamps: false,
 });
 
-// Menu.hasMany(MenuItem, {as: 'items', foreignKey: 'menu_id'});
-// MenuItem.belongsTo(Menu, {foreignKey: 'menu_id'});
+Menu.hasMany(Item, {as: 'Item', foreignKey: 'menu_id'});
+Item.belongsTo(Menu, {foreignKey: 'menu_id'});
 
-module.exports = Menu
+
+module.exports = {Menu}

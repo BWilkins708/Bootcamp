@@ -1,0 +1,39 @@
+    <head>
+        <link rel="stylesheet" href="/style.css"/>
+    </head>
+    <body>
+        <h1 style="text-align:center;
+        border:black;
+         border-width:5px;
+         border-style:solid;
+          background:white"> {{restaurant.name}} </h1> <br>
+
+        <h2 style="text-align:center;
+        border:black;
+         border-width:5px;
+         border-style:solid;
+          background:white"> Menu </h2> <br>
+
+        <div>
+            {{#each restaurant.Menu}}
+            <h2>{{this.title}}</h2>
+        <table>
+        <thead>
+          <tr>
+            <th scope="col">Food</th>
+            <td scope="col">Price</th>
+          </tr>
+        </thead>
+        <tbody>
+            {{#each this.Item}}
+          <tr>
+            <th scope="row">{{this.name}}</th>
+            <td>{{this.price}}</td>
+          </tr>
+          {{/each}}
+        </tbody>
+      </table>
+      {{/each}}
+      </div>
+        <img src="{{restaurant.image}}"style="img-align:centre" width="600" height="600" alt="Computer Hope">
+    </body>

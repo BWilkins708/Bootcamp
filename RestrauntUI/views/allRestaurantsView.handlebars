@@ -1,0 +1,28 @@
+<h1>Restaurants<br></h1>
+<h2>    
+    <a href="add.html" style=border:black;border-width:5px;border-style:solid;background:white>Add Restaurant</a><br>
+    <a href="delete.html" style=border:black;border-width:5px;border-style:solid;background:white>Delete Restaurant</a>
+    </h2>
+<section>
+    {{#each restaurants}}
+        <article>
+            <a href="restaurants/{{this.id}}"><li>{{this.name}}</li></a>
+
+            <h1>
+                    <a href="#" aria-label="Delete"> <i data-feather="x-square"></i>
+                    </a>
+            </h1>
+            
+            <a href="#" aria-label="Open Menu">
+                <header style="background-image: url(https://www.telegraph.co.uk/content/dam/Travel/Destinations/Europe/England/Brighton/brighton-restaurants-hotel-du-vin-bistro.jpg);"></header>      
+            </a>
+
+        </article>
+    {{/each}}
+
+
+<script>
+    feather.replace(); // supports the display of feather icon
+</script>
+
+</section>

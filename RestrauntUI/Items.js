@@ -11,9 +11,10 @@ class Item extends Model {
 Item.init({
     name: DataTypes.STRING,
     price: DataTypes.NUMBER,
+    menu_id: DataTypes.INTEGER,
 }, {
     sequelize,
     timestamps: false,
 });
 
-module.exports = Item
+module.exports = {Item}

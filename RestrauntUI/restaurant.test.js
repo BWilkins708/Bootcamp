@@ -1,5 +1,5 @@
-const {sequelize} = require('../sequelize_index');
-const {Restaurant} = require('../Restaurant');
+const {sequelize} = require('./sequelize_index');
+const {Restaurant} = require('./Restaurant');
 const {Menu} = require('../Menu');
 describe('Relationships', () => {
     beforeAll(async () => {
